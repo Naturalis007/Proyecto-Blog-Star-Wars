@@ -6,9 +6,28 @@ import { Card } from "../component/card";
 import "../../styles/home.css";
 
 export const Home = () => (
-	<div>
-		<Card ruta="/personajes/" titulo="Personajes" descripcion="Aqui podrás revisar toda la info de los personajes"/>
-		<Card ruta="/planetas/"  titulo="Planetas" descripcion="Aqui podrás revisar toda la info de los planetas"/>
+	<div className="container text-center">
+		<div className="row">
+			<div className="col">
+				<Card 
+					ruta="/personajes/" 
+					titulo="Personajes de la saga"
+					descripcion="Aqui podrás revisar toda la info de los personajes"
+					boton="Ver+"/>
+			</div>
+
+			<div className="col">
+				<Card 
+					ruta="/planetas/"
+					titulo="Planetas"
+					descripcion="Aqui podrás revisar toda la info de los planetas"
+					boton="Ver+"/>
+					
+			</div>
+		</div>
+
+		
+
 	</div>
 
 );
