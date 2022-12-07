@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "../component/card";
 
 
+
 import "../../styles/home.css";
 
 export const Home = () => (
