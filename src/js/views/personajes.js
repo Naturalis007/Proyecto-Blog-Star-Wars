@@ -1,34 +1,34 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import { ListadoCard } from "../component/card";
+import { Context } from "../store/appContext";
 
-export const Personajes = () => ( 
-  <div className="container text-center">
-      <div className="row">
-          <div className="col">
-              <ListadoCard 
-                  titulo="Nombre del personaje"
-                  descripcion="Caracteristicas del personaje"
-                  boton="Quiero saber +" />
-          </div>
-          <div className="col">
-              <ListadoCard 
-                  titulo="Nombre del personaje"
-                  descripcion="Caracteristicas del personaje"
-                  boton="Quiero saber +" />
-          </div>
-          <div className="col">
-              <ListadoCard 
-                  titulo="Nombre del personaje"
-                  descripcion="Caracteristicas del personaje"
-                  boton="Quiero saber +" />
-          </div>
-          <div className="col">
-              <ListadoCard 
-                  titulo="Nombre del personaje"
-                  descripcion="Caracteristicas del personaje"
-                  boton="Quiero saber +" />
-          </div>
-        </div>  
-  </div>
-)
+export const Personajes = () =>{
+    const {store,actions} = useContext(Context);
+    return <div className="container text-center">
+        <h1>LISTADO DE PERSONAJES SW</h1>
+        <div className="row">
+           
+                {store.personajes.map((object,index)=>{
+                    return <ListadoCard 
+                                titulo={object.name}
+                                boton="Quiero saber +" 
+                            />
+                })}
+                
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
