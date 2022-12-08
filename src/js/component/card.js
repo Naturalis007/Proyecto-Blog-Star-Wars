@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 //Esta card será para mostrar personajes y planetas según quiera seleccionar el usuario// 
 export const Card = (props) => {
     return ( 
-    <div className="card">
-      
-      <div className="card-body">
-        <img src="https://cdn.pocket-lint.com/r/s/970x/assets/images/147767-tv-feature-what-order-should-you-watch-all-the-star-wars-films-image1-1wdfjceytb.jpg"
-        width={"300"} />
-        <h1 className="card-title"> {props.titulo} </h1>
-        <p className="card-text"> {props.descripcion} </p>
-        <Link to = {props.ruta} >
-          <a className="btn btn-warning"> {props.boton} </a>
-        </Link>
+      <div className="card">
+        
+        <div className="card-body">
+          <img src="https://cdn.pocket-lint.com/r/s/970x/assets/images/147767-tv-feature-what-order-should-you-watch-all-the-star-wars-films-image1-1wdfjceytb.jpg"
+          width={"300"} />
+          <h1 className="card-title"> {props.titulo} </h1>
+          <p className="card-text"> {props.descripcion} </p>
+          <Link to = {props.ruta} >
+            <a className="btn btn-warning"> {props.boton} </a>
+          </Link>
+        </div>
       </div>
-    </div>
-)
+  )
 };
 
 

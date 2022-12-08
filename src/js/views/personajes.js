@@ -5,16 +5,30 @@ import { ListadoCard } from "../component/card";
 export const Personajes = () => ( 
   <div className="container text-center">
       <div className="row">
-           <div className="col">
+          <div className="col">
               <ListadoCard 
                   titulo="Nombre del personaje"
                   descripcion="Caracteristicas del personaje"
-                  boton="Quiero saber +"
-              />
-              
-              <Link to="/">
-              <Link/> AQUI ME PERD*/
-            </div>  
-      </div>  
+                  boton="Quiero saber +" />
+          </div>
+          <div className="col">
+              <ListadoCard 
+                  titulo="Nombre del personaje"
+                  descripcion="Caracteristicas del personaje"
+                  boton="Quiero saber +" />
+          </div>
+          <div className="col">
+              <ListadoCard 
+                  titulo="Nombre del personaje"
+                  descripcion="Caracteristicas del personaje"
+                  boton="Quiero saber +" />
+          </div>
+          <div className="col">
+              <ListadoCard 
+                  titulo="Nombre del personaje"
+                  descripcion="Caracteristicas del personaje"
+                  boton="Quiero saber +" />
+          </div>
+        </div>  
   </div>
 )
