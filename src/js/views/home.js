@@ -24,6 +24,14 @@ export const Home = () => (
 					boton="Ver+"/>
 					
 			</div>
+
+			<div className="col">
+				<Card 
+					ruta="/naves/" 
+					titulo="Naves espaciales de la saga"
+					descripcion="Aqui podrás revisar toda la info de los naves que aparecen en la saga"
+					boton="Ver+"/>
+			</div>
 		</div>
 
 		

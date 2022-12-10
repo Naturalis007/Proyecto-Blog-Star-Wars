@@ -1,14 +1,14 @@
 import React, {useContext} from "react";
-import { Link } from "react-router-dom";
-import { ListadoCard } from "../component/card";
 import { Context } from "../store/appContext";
+import { ListadoCard } from "../component/card";
 
-export const Personajes = () =>{
+
+export const Naves = () => {
     const {store,actions} = useContext(Context);
         return <div className="container text-center">
-                    <h1>LISTADO DE PERSONAJES SW</h1>
+                    <h1>LISTADO DE NAVES SW</h1>
                     <div className="row">
-                        {store.personajes.map((object,index)=>{
+                        {store.naves.map((object,index)=>{
                              return <ListadoCard 
                                         titulo={object.name}
                                         boton="Quiero saber +" 
@@ -18,16 +18,3 @@ export const Personajes = () =>{
                     </div>
                 </div>
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

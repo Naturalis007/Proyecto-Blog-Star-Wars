@@ -15,6 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			personajes:[],
 			planetas:[],
+			naves:[],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -49,6 +50,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://www.swapi.tech/api/planets")
 				.then(response=>response.json())
 				.then(data=>setStore({planetas:data.results}))
+			},
+			getNaves: ()=> {
+				fetch("https://www.swapi.tech/api/starships")
+				.then(response=>response.json())
+				.then(data=>setStore({naves:data.results}))
 			}
 
 		}
