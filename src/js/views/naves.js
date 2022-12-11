@@ -11,7 +11,7 @@ export const Naves = () => {
                         {store.naves.map((object,index)=>{
                              return <ListadoCard 
                                         titulo={object.name}
-                                        boton="Quiero saber +" 
+                                        uid={object.uid} 
                                      />
                       })}
                     

@@ -12,7 +12,7 @@ export const Planetas = () => {
        {store.planetas.map((object,index)=>{
             return <ListadoCard 
                         titulo={object.name}
-                        boton="Quiero saber +" 
+                        uid={object.uid}
                     />
        } )}
             

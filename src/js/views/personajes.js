@@ -9,10 +9,17 @@ export const Personajes = () =>{
                     <h1>LISTADO DE PERSONAJES SW</h1>
                     <div className="row">
                         {store.personajes.map((object,index)=>{
-                             return <ListadoCard 
+                             return (<ListadoCard 
                                         titulo={object.name}
-                                        boton="Quiero saber +" 
-                                     />
+                                        url={object.url} 
+                                        uid = {object.uid}
+                                        ruta = {"/personajes/"+object.uid}
+                                        key={index}
+                                        // action={actions.getDetallePersonaje(object.uid)}
+                                        
+                                     /> 
+                                    
+                                     ) 
                       })}
                     
                     </div>

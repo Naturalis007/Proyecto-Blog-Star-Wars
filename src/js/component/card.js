@@ -28,11 +28,27 @@ export const ListadoCard = (props) => {
             <img src="https://es.rollingstone.com/wp-content/uploads/2021/05/20-perosnajes-star-wars.jpg" className="card-img-top"/>
             <div className="card-body">
                 <h2 className="card-title">{props.titulo} </h2>
-                <p className="card-text">{props.descripcion} </p>
-                <Link to = {props.ruta} > 
-                  <a href="#" className="btn btn-primary">{props.boton}</a> 
+                <p className="card-text">ID: {props.uid} </p>
+                <p>URL: {props.url}</p>
+                <Link to={props.ruta}>  
+                  <a className="btn btn-primary" onClick={props.action}>Ver detalle</a> 
                 </Link>
             </div>
         </div>    
     )
 }
+
+
+
+//ESTA CARD ES PARA VER EL DETALLE DE CADA PERSONAJE/NAVE/PLANETA
+
+export const DetalleCard = (props) => {
+    return (
+        <div className="card">
+            <div className="card-body">
+                <h1>{props.nombre}</h1>
+            </div>
+        </div>
+    )
+}
+
