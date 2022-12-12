@@ -60,15 +60,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data=>setStore({naves:data.results}))
 
 			}
-			// ,
-
-			// getDetallePersonaje: (id) => {
-			// 	fetch("https://www.swapi.tech/api/people/"+id)
-			// 	.then(response=>response.json())
-			// 	.then(data=>setStore({detallePersonaje:data.results}))
-				
-			// }
-
 		}
 	};
 };

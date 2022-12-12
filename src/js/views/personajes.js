@@ -11,11 +11,9 @@ export const Personajes = () =>{
                         {store.personajes.map((object,index)=>{
                              return (<ListadoCard 
                                         titulo={object.name}
-                                        url={object.url} 
                                         uid = {object.uid}
                                         ruta = {"/personajes/"+object.uid}
                                         key={index}
-                                        // action={actions.getDetallePersonaje(object.uid)}
                                         
                                      /> 
                                     

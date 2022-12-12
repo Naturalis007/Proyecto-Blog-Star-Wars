@@ -28,8 +28,6 @@ export const ListadoCard = (props) => {
             <img src="https://es.rollingstone.com/wp-content/uploads/2021/05/20-perosnajes-star-wars.jpg" className="card-img-top"/>
             <div className="card-body">
                 <h2 className="card-title">{props.titulo} </h2>
-                <p className="card-text">ID: {props.uid} </p>
-                <p>URL: {props.url}</p>
                 <Link to={props.ruta}>  
                   <a className="btn btn-primary" onClick={props.action}>Ver detalle</a> 
                 </Link>
