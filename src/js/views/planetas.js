@@ -11,8 +11,10 @@ export const Planetas = () => {
     <div className="row">
        {store.planetas.map((object,index)=>{
             return <ListadoCard 
-                        titulo={object.name}
-                        uid={object.uid}
+                        titulo = {object.name}
+                        uid = {object.uid}
+                        ruta = {"/planetas/"+object.uid}
+                        key = {index}
                     />
        } )}
             

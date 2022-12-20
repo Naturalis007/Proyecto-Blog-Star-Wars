@@ -5,14 +5,34 @@ import { object } from "prop-types";
 import { DetalleCard } from "../component/card";
 
 //retornar detalles de los planetas//
-export const DetallePlanetas = ()=> {
+export const DetallePlanetas = (props)=> {
+
+    const {id} = useParams();
+    const [planetas, setPlanetas] = useState({});
+
+    useEffect(()=>{
+        fetch("https://www.swapi.tech/api/planets/"+id)
+        .then((response)=>response.json())
+        .then((data)=>setPlaneta(data.result))
+    },[])
+
     return ( 
     <div className="container">
         <div className="row-5">
             <img src="https://pm1.narvii.com/6361/c338000011dddc976bc1e960bf83c6a04402b720_hq.jpg"/>
         </div>
         <div className="row-7">
-        <p>Aqui va la descripcion del planeta seleccionado</p>
+        <p>Aqui va la descripcion del planeta seleccionado: <b>{planeta?.properties?.name}</b></p>
+        <ul>
+            <li>Diametro: {planetas?.properties?.diameter} km </li>
+            <li>Periodo de rotación: {planetas?.properties?.rotation_period} horas </li>
+            <li>Periodo orbital: {planetas?.properties?.orbital_period} años </li>
+            <li>Gravedad: {planetas?.properties?.gravity} g</li>
+            <li>Población: {planetas?.properties?.population} individuos </li>
+            <li>Clima: {planetas?.properties?.climate} </li>
+            <li>Terreno: {planetas?.properties?.terrain} </li>
+            <li>Superficie del agua: {planetas?.properties?.surface_water} m²</li>
+        </ul>
         </div>  
     </div>  
 )};
@@ -56,6 +76,9 @@ export const DetallePersonajes = (props)=> {
 
 //aqui para retornar el detalle de las naves//
 export const DetalleNaves = ()=> {
+
+   
+
     return ( 
     <div className="container">
         <div className="row-5">
