@@ -12,6 +12,7 @@ export const Naves = () => {
                              return <ListadoCard 
                                         titulo={object.name}
                                         uid={object.uid} 
+                                        
                                      />
                       })}
                     

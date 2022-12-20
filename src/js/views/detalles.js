@@ -8,7 +8,7 @@ import { DetalleCard } from "../component/card";
 export const DetallePlanetas = (props)=> {
 
     const {id} = useParams();
-    const [planetas, setPlanetas] = useState({});
+    const [planeta, setPlaneta] = useState({});
 
     useEffect(()=>{
         fetch("https://www.swapi.tech/api/planets/"+id)
@@ -24,14 +24,14 @@ export const DetallePlanetas = (props)=> {
         <div className="row-7">
         <p>Aqui va la descripcion del planeta seleccionado: <b>{planeta?.properties?.name}</b></p>
         <ul>
-            <li>Diametro: {planetas?.properties?.diameter} km </li>
-            <li>Periodo de rotación: {planetas?.properties?.rotation_period} horas </li>
-            <li>Periodo orbital: {planetas?.properties?.orbital_period} años </li>
-            <li>Gravedad: {planetas?.properties?.gravity} g</li>
-            <li>Población: {planetas?.properties?.population} individuos </li>
-            <li>Clima: {planetas?.properties?.climate} </li>
-            <li>Terreno: {planetas?.properties?.terrain} </li>
-            <li>Superficie del agua: {planetas?.properties?.surface_water} m²</li>
+            <li>Diametro: {planeta?.properties?.diameter} km </li>
+            <li>Periodo de rotación: {planeta?.properties?.rotation_period} horas </li>
+            <li>Periodo orbital: {planeta?.properties?.orbital_period} años </li>
+            <li>Gravedad: {planeta?.properties?.gravity} g</li>
+            <li>Población: {planeta?.properties?.population} individuos </li>
+            <li>Clima: {planeta?.properties?.climate} </li>
+            <li>Terreno: {planeta?.properties?.terrain} </li>
+            <li>Superficie del agua: {planeta?.properties?.surface_water} m²</li>
         </ul>
         </div>  
     </div>  
