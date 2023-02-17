@@ -13,7 +13,8 @@ export const Home = () => (
 					ruta="/personajes/" 
 					titulo="Personajes de la saga"
 					descripcion="Aqui podrás revisar toda la info de los personajes"
-					boton="Ver+"/>
+					boton="Ver+"
+					/>
 			</div>
 
 			<div className="col">

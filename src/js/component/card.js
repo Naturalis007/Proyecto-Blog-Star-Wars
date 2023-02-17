@@ -1,5 +1,6 @@
-import React from "react";
+import React,{ useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext"; 
 
 //Esta card será para mostrar personajes y planetas según quiera seleccionar el usuario// 
 export const Card = (props) => {
@@ -23,6 +24,7 @@ export const Card = (props) => {
 //Esta card será para para mostrar varias tarjetas apiladas, como una vista general de //
 //personajes y planetas//
 export const ListadoCard = (props) => {
+  const { actions } = useContext(Context)
     return (
         <div className="card" style={{width: "18rem"}}>
             <img src="https://es.rollingstone.com/wp-content/uploads/2021/05/20-perosnajes-star-wars.jpg" className="card-img-top"/>
@@ -31,6 +33,9 @@ export const ListadoCard = (props) => {
                 <Link to={props.ruta}>  
                   <a className="btn btn-primary" onClick={props.action}>Ver detalle</a> 
                 </Link>
+                <button className="btn btn-danger" onClick={()=>{
+                  actions.addFav(props.titulo)
+                }}>{props.favorito}</button>
             </div>
         </div>    
     )

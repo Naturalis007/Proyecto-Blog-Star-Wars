@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planetas:[],
 			naves:[],
 
-			// detallePersonaje:[],
+			favoritos:[],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -59,7 +59,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(response=>response.json())
 				.then(data=>setStore({naves:data.results}))
 
-			}
+			},
+			addFav:(titulo)=>{
+				const store = getStore();
+				console.log("Elemento add favoritos: "+titulo)
+				setStore({favoritos:[...store.favoritos,titulo]})
+
+			},
 		}
 	};
 };

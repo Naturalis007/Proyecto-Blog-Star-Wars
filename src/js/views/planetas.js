@@ -15,6 +15,7 @@ export const Planetas = () => {
                         uid = {object.uid}
                         ruta = {"/planetas/"+object.uid}
                         key = {index}
+                        favorito="🖤"
                     />
        } )}
             
