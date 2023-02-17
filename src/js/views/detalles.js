@@ -87,28 +87,30 @@ export const DetalleNaves = ()=> {
 
     return ( 
     <div className="container">
-        <div className="row-5">
-            <img src="https://pm1.narvii.com/6361/c338000011dddc976bc1e960bf83c6a04402b720_hq.jpg"/>
-        </div>
-        <div className="row-7">
-        <p>Aqui va la descripcion de la nave seleccionado: <b>{nave?.properties?.name}</b></p>
-        <ul>
-            <li>Modelo: {nave?.properties?.model} </li>
-            <li>Clase: {nave?.properties?.starship_class} </li>
-            <li>Manufacturador: {nave?.properties?.manufacturer}  </li>
-            <li>Costo: {nave?.properties?.cost_in_credits} creditos </li>
-            <li>Largo: {nave?.properties?.length} </li>
-            <li>Grupo: {nave?.properties?.crew}  </li>
-            <li>Pasajeros: {nave?.properties?.passengers} </li>
-            <li>Velocidad atmosfera: {nave?.properties?.max_atmosphering_speed} </li>
-            <li>Ratio de manejo: {nave?.properties?.hyperdrive_rating} </li>
-            <li>MGLT: {nave?.properties?.MGLT} </li>
-            <li>Capacidad de cargo: {nave?.properties?.cargo_capacity} </li>
-            <li>Consumibles: {nave?.properties?.consumables} </li>
-            <li>Pilotos: {nave?.properties?.pilots} </li>
 
-        </ul>
+        <div className="row">
+            <div className="col">
+                <p>Aqui va la descripcion de la nave seleccionado: <b>{nave?.properties?.name}</b></p>
+                <ul>
+                    <li>Modelo: {nave?.properties?.model} </li>
+                    <li>Clase: {nave?.properties?.starship_class} </li>
+                    <li>Manufacturador: {nave?.properties?.manufacturer}  </li>
+                    <li>Costo: {nave?.properties?.cost_in_credits} creditos </li>
+                    <li>Largo: {nave?.properties?.length} </li>
+                    <li>Grupo: {nave?.properties?.crew}  </li>
+                    <li>Pasajeros: {nave?.properties?.passengers} </li>
+                    <li>Velocidad atmosfera: {nave?.properties?.max_atmosphering_speed} </li>
+                    <li>Ratio de manejo: {nave?.properties?.hyperdrive_rating} </li>
+                    <li>MGLT: {nave?.properties?.MGLT} </li>
+                    <li>Capacidad de cargo: {nave?.properties?.cargo_capacity} </li>
+                    <li>Consumibles: {nave?.properties?.consumables} </li>
+                    <li>Pilotos: {nave?.properties?.pilots} </li>
+
+                </ul>
+            </div> 
         </div>  
     </div>
    )};
+
+   
 
