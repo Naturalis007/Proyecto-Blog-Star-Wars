@@ -9,11 +9,13 @@ export const Naves = () => {
                     <h1>LISTADO DE NAVES SW</h1>
                     <div className="row">
                         {store.naves.map((object,index)=>{
-                             return <ListadoCard 
+                             return (<ListadoCard 
                                         titulo={object.name}
                                         uid={object.uid} 
+                                        ruta = {"/naves/"+object.uid}
+                                        key={index}
                                         
-                                     />
+                                     />)
                       })}
                     
                     </div>
