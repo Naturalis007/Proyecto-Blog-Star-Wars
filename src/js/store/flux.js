@@ -66,6 +66,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({favoritos:[...store.favoritos,titulo]})
 
 			},
+			deleteFav: (index) => {
+				const store = getStore();
+				const newFavoritos = [...store.favoritos]; // crea una nueva matriz para evitar mutar la matriz original
+				newFavoritos.splice(index, 1); // elimina el elemento en el índice proporcionado
+				setStore({ favoritos: newFavoritos });
+			  },	
 		}
 	};
 };
